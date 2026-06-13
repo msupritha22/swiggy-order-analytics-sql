@@ -45,25 +45,25 @@ cities ──< customers ──< orders >── restaurants ──< menu_items
 ##  Business Questions Answered
 
 ### Q1 — Repeat Order Rate per Restaurant
-> *Which restaurants have the highest customer loyalty?*
+> Which restaurants have the highest customer loyalty?
 
 **SQL Used:** CTE, GROUP BY, HAVING, CASE WHEN, ROUND
 **Insight:** Restaurants with repeat rate > 50% are top loyalty candidates.
 
 ### Q2 — Peak Ordering Hour by City & Cuisine
-> *When do customers order the most, by city and cuisine type?*
+> When do customers order the most, by city and cuisine type?
 
 **SQL Used:** `HOUR()`, Window Function (`RANK`), CTE, multiple GROUP BY
 **Insight:** Helps pre-position agents and trigger time-based promotions.
 
 ### Q3 — Impact of Delivery Time on Customer Rating
-> *Does longer delivery time lead to lower ratings?*
+> Does longer delivery time lead to lower ratings?
 
 **SQL Used:** `TIMESTAMPDIFF`, CASE WHEN bucketing, AVG, CTE
 **Insight:** Identifies the delivery time threshold where ratings drop.
 
 ### Q4 — Customers at Churn Risk
-> *Which high-value customers haven't ordered in 30+ days?*
+> Which high-value customers haven't ordered in 30+ days?
 
 **SQL Used:** `DATEDIFF`, MAX, HAVING, CTE, CASE WHEN risk segmentation
 **Insight:** Win-back campaign target list with risk level classification.
@@ -71,7 +71,7 @@ cities ──< customers ──< orders >── restaurants ──< menu_items
 ---
 
 ### Q5 — Month-over-Month Revenue Growth by Cuisine
-> *How is revenue trending each month across cuisine types?*
+> How is revenue trending each month across cuisine types?
 
 **SQL Used:** `LAG()` window function, `DATE_FORMAT`, CTE, COALESCE
 **Insight:** Identifies growing vs declining cuisines for strategic decisions.
